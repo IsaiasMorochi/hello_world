@@ -16,7 +16,6 @@ class _MyNavigatorState extends State<MyNavigator> with SingleTickerProviderStat
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     controller = new TabController(length: 3, vsync: this);
   }
