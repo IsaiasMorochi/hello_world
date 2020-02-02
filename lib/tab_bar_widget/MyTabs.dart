@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/tab_widget/pages/contact.dart';
-import 'package:hello_world/tab_widget/pages/home.dart';
-import 'package:hello_world/tab_widget/pages/video.dart';
+import 'package:hello_world/tab_bar_widget/pages/contact.dart';
+import 'package:hello_world/tab_bar_widget/pages/home.dart';
+import 'package:hello_world/tab_bar_widget/pages/video.dart';
 
 class MyTabs extends StatefulWidget {
   MyTabs({Key key}) : super(key: key);
@@ -11,13 +11,12 @@ class MyTabs extends StatefulWidget {
 }
 
 class _MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin {
-
   TabController controller;
 
   @override
-  void initState() { 
+  void initState() {
     super.initState();
-    controller = new TabController(length: 3, vsync: this);    
+    controller = new TabController(length: 3, vsync: this);
   }
 
   @override
@@ -42,11 +41,7 @@ class _MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin {
         ),
       ),
       body: new TabBarView(
-        children: <Widget>[
-          new Home(),
-          new Video(),
-          new Contact()
-        ],
+        children: <Widget>[new Home(), new Video(), new Contact()],
         controller: controller,
       ),
     );

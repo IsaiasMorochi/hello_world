@@ -14,8 +14,8 @@ import 'package:hello_world/infinite_list_widget/RandomWords.dart';
 //    ));
 // }
 
-// void main() {
-//    runApp(new MaterialApp(
-//      home: RandomWords(),
-//    ));
-// }
+void main() {
+   runApp(new MaterialApp(
+     home: RandomWords(),
+   ));
+}
